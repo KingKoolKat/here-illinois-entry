@@ -1,0 +1,280 @@
+:root {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #162033;
+  background: #f4f6f9;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #47607d;
+  font-size: 0.82rem;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 640px;
+  color: #526072;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: #35506d;
+  background: #dfe8f3;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background: #16324f;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d8e0ea;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(18, 35, 58, 0.06);
+}
+
+.panel-heading {
+  margin-bottom: 16px;
+}
+
+.panel-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.panel h2 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.panel p {
+  margin: 0;
+  color: #5d6a7d;
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.record-form {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #e5ebf2;
+}
+
+.search-results {
+  margin-top: 18px;
+}
+
+.results-heading {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  color: #233248;
+}
+
+.results-list {
+  display: grid;
+  gap: 12px;
+}
+
+.result-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px;
+  border: 1px solid #d8e0ea;
+  border-radius: 12px;
+  background: #fbfcfe;
+}
+
+.result-card.selected {
+  border-color: #16324f;
+  background: #eef3f8;
+}
+
+.result-title {
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #162033;
+}
+
+.result-detail {
+  margin: 0;
+  color: #526072;
+  font-size: 0.92rem;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 6px;
+  color: #233248;
+  font-size: 0.94rem;
+}
+
+.form-grid input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c8d2de;
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+
+.form-grid button,
+.panel-row button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 14px;
+  background: #16324f;
+  color: #ffffff;
+}
+
+.secondary-button {
+  border: 1px solid #b8c6d8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #ffffff;
+  color: #16324f;
+}
+
+.form-grid button:disabled,
+.panel-row button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.status-panel {
+  min-height: 190px;
+}
+
+.status {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+.helper-text {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #eef3f8;
+  color: #4d5a6b;
+}
+
+.status.neutral {
+  background: #eef3f8;
+  color: #4d5a6b;
+}
+
+.status.success {
+  background: #e6f6ec;
+  color: #1f6b3a;
+}
+
+.status.error {
+  background: #fdeceb;
+  color: #9c2f27;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5ebf2;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-size: 0.88rem;
+  color: #526072;
+}
+
+.empty-state {
+  text-align: center;
+  color: #708095;
+}
+
+@media (max-width: 720px) {
+  .app-header {
+    flex-direction: column;
+  }
+
+  .panel-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .result-card {
+    flex-direction: column;
+  }
+}
