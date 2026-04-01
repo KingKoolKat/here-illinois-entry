@@ -5,9 +5,8 @@ Minimal full-stack attendance editing web app with a React frontend and an Expre
 ## Project structure
 
 ```text
-attendance-editor/
-  client/
-  server/
+client/
+server/
 ```
 
 ## Architecture and design choices
